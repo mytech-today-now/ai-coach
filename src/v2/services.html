@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f3ede4" />
+    <meta
+      name="description"
+      content="See how Kyle Rode's AI coding mentorship works, including process, boundaries, and how it differs from marketplace mentoring."
+    />
+    <meta property="og:title" content="Services | Kyle Rode" />
+    <meta
+      property="og:description"
+      content="A clear monthly coaching cadence with goal gates, live screen-share sessions, and unlimited async messaging."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/og-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="ga4-measurement-id" content="" />
+    <meta name="apple-mobile-web-app-title" content="Kyle Rode" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon.svg" />
+    <title>Services | Kyle Rode</title>
+    <script>
+      (() => {
+        const themeKey = 'ai-coach-v2.theme';
+        const bigTextKey = 'ai-coach-v2.bigText';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const preference = JSON.parse(localStorage.getItem(themeKey) || '"auto"');
+        const resolved =
+          preference === 'light' || preference === 'dark'
+            ? preference
+            : prefersDark
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = resolved;
+        if (JSON.parse(localStorage.getItem(bigTextKey) || 'false')) {
+          document.documentElement.classList.add('big-text');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles/site.css" />
+  </head>
+  <body class="site-shell" data-page="services">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient-shell" aria-hidden="true">
+      <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+      <div class="ambient-fallback"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header__row">
+        <div class="brand-lockup">
+          <a class="brand-mark" href="./index.html" aria-label="Kyle Rode home">
+            <img src="./assets/icon.svg" alt="" />
+          </a>
+          <div class="brand-copy">
+            <strong>Kyle Rode</strong>
+            <p>AI Coding Coach / Programming Mentor</p>
+          </div>
+        </div>
+
+        <div class="site-actions">
+          <button id="install-button" class="button button--ghost icon-button" type="button" hidden>
+            Install app
+          </button>
+          <button id="shortcuts-button" class="button button--ghost icon-button" type="button" aria-haspopup="dialog">
+            Shortcuts
+          </button>
+          <button id="theme-toggle" class="button button--ghost theme-toggle" type="button">Theme</button>
+          <button id="text-toggle" class="button button--ghost text-toggle" type="button">Big Text</button>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a data-nav="home" href="./index.html">Home</a>
+        <a data-nav="services" href="./services.html">Services</a>
+        <a data-nav="about" href="./about.html">About Kyle</a>
+        <a data-nav="pricing" href="./pricing.html">Pricing</a>
+        <a data-nav="signup" href="./signup.html">Signup</a>
+        <a data-nav="contact" href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="page-hero" data-reveal>
+        <div class="hero-copy flow">
+          <p class="eyebrow">Services</p>
+          <h1>How the mentorship works.</h1>
+          <p class="lede">
+            The cadence is simple: clear goals, a setup session, two live screen-share calls each month, async
+            support, and written follow-through that keeps you moving between calls.
+          </p>
+          <div class="cta-row">
+            <a class="button button--primary" href="./signup.html" data-track-click="cta_apply">Sign up now</a>
+            <a class="button button--ghost" href="./pricing.html" data-track-click="cta_pricing">Compare tiers</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel card">
+          <p class="eyebrow">Session boundary</p>
+          <h2>You do not get a coder-for-hire.</h2>
+          <p>
+            You get a mentor who helps you build skill, debug, and solve problems independently inside your real
+            codebase. Sessions end with a summary, agreed success gates, and a practical next step.
+          </p>
+          <ul class="note-list">
+            <li>Clients handle notes and recordings if they want them.</li>
+            <li>Every live call ends with recaps and next actions.</li>
+            <li>Async replies target a 24-hour turnaround.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Process</p>
+          <h2>A cadence that protects attention and produces momentum.</h2>
+        </header>
+        <div id="process-timeline" class="card-grid"></div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Why Kyle</p>
+          <h2>Structured coaching, real-world tooling, and an empowerment-first mindset.</h2>
+        </header>
+        <div id="differentiators-grid" class="card-grid"></div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">How this compares</p>
+          <h2>Focused mentorship instead of marketplace churn.</h2>
+        </header>
+        <div class="card">
+          <div class="table-wrap">
+            <table id="comparison-table" class="comparison-table">
+              <thead>
+                <tr>
+                  <th scope="col">Topic</th>
+                  <th scope="col">Kyle Rode</th>
+                  <th scope="col">Codementor / marketplace</th>
+                  <th scope="col">MentorCruise style</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="sticky-links" class="sticky-links" aria-label="Project links"></aside>
+
+    <footer class="site-footer">
+      <div class="site-footer__grid">
+        <div class="site-footer__meta">
+          <p class="eyebrow">Kyle Rode</p>
+          <p>Mentorship built for remote builders who want to master their own stack, not rent dependence.</p>
+        </div>
+        <div class="footer-links">
+          <a class="button button--ghost" href="./pricing.html">Pricing</a>
+          <a class="button button--ghost" href="./contact.html">Contact</a>
+        </div>
+      </div>
+      <p>© <span id="footer-year">2026</span> Kyle Rode.</p>
+    </footer>
+
+    <dialog id="shortcuts-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Keyboard shortcuts</p>
+            <h2>Quick actions</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close shortcuts dialog">Close</button>
+        </header>
+        <div class="shortcut-grid">
+          <div><kbd>?</kbd><span>Open this help panel</span></div>
+          <div><kbd>1</kbd> to <kbd>6</kbd><span>Jump to the main pages</span></div>
+          <div><kbd>S</kbd><span>Open signup</span></div>
+          <div><kbd>T</kbd><span>Cycle themes</span></div>
+          <div><kbd>B</kbd><span>Toggle big text</span></div>
+          <div><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd><span>Open diagnostics</span></div>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="debug-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Diagnostics</p>
+            <h2>Debug mode</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close diagnostics">Close</button>
+        </header>
+        <div id="debug-content" class="debug-content"></div>
+      </form>
+    </dialog>
+
+    <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <template id="toast-template">
+      <article class="toast card">
+        <strong class="toast-title"></strong>
+        <p class="toast-body"></p>
+      </article>
+    </template>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

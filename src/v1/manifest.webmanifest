@@ -1,0 +1,19 @@
+{
+  "name": "Kyle Rode - AI Coding Coach",
+  "short_name": "Kyle Rode",
+  "description": "AI coding mentorship website and interactive studio for self-reliant developers.",
+  "start_url": "./index.html#/home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111d",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

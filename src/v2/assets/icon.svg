@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kyle Rode logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="55%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="24%" r="80%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.3)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#071118" />
+  <rect x="28" y="28" width="456" height="456" rx="112" fill="url(#bg)" />
+  <circle cx="168" cy="150" r="96" fill="url(#glow)" />
+  <circle cx="354" cy="346" r="108" fill="rgba(255,255,255,0.08)" />
+  <path d="M162 146v220M162 254h64l96-108M226 254l108 108" fill="none" stroke="#ffffff" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+

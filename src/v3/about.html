@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f3ede4" />
+    <meta
+      name="description"
+      content="Learn why Kyle Rode is a credible AI coding coach, including his 25+ years in software and IT, myTech.Today consulting background, public tooling, and NYU Tisch creative-tech perspective."
+    />
+    <meta property="og:title" content="About Kyle Rode" />
+    <meta
+      property="og:description"
+      content="A practical coaching background rooted in consulting, AI-first development, public code, and creative-tech experience."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/og-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="ga4-measurement-id" content="" />
+    <meta name="apple-mobile-web-app-title" content="Kyle Rode" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon.svg" />
+    <title>About Kyle Rode</title>
+    <script>
+      (() => {
+        const themeKey = 'ai-coach-v2.theme';
+        const bigTextKey = 'ai-coach-v2.bigText';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const preference = JSON.parse(localStorage.getItem(themeKey) || '"auto"');
+        const resolved =
+          preference === 'light' || preference === 'dark'
+            ? preference
+            : prefersDark
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = resolved;
+        if (JSON.parse(localStorage.getItem(bigTextKey) || 'false')) {
+          document.documentElement.classList.add('big-text');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles/site.css" />
+  </head>
+  <body class="site-shell" data-page="about">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient-shell" aria-hidden="true">
+      <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+      <div class="ambient-fallback"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header__row">
+        <div class="brand-lockup">
+          <a class="brand-mark" href="./index.html" aria-label="Kyle Rode home">
+            <img src="./assets/icon.svg" alt="" />
+          </a>
+          <div class="brand-copy">
+            <strong>Kyle Rode</strong>
+            <p>AI Coding Coach / Programming Mentor</p>
+          </div>
+        </div>
+
+        <div class="site-actions">
+          <button id="install-button" class="button button--ghost icon-button" type="button" hidden>
+            Install app
+          </button>
+          <button id="shortcuts-button" class="button button--ghost icon-button" type="button" aria-haspopup="dialog">
+            Shortcuts
+          </button>
+          <button id="theme-toggle" class="button button--ghost theme-toggle" type="button">Theme</button>
+          <button id="text-toggle" class="button button--ghost text-toggle" type="button">Big Text</button>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a data-nav="home" href="./index.html">Home</a>
+        <a data-nav="services" href="./services.html">Services</a>
+        <a data-nav="about" href="./about.html">About Kyle</a>
+        <a data-nav="pricing" href="./pricing.html">Pricing</a>
+        <a data-nav="signup" href="./signup.html">Signup</a>
+        <a data-nav="contact" href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="page-hero" data-reveal>
+        <div class="hero-copy flow">
+          <p class="eyebrow">About Kyle</p>
+          <h1>Practical coaching backed by public work and real consulting experience.</h1>
+          <p class="lede">
+            Kyle Rode owns myTech.Today, has been doing IT consulting since 2016, and brings 25+ years across
+            enterprise software, testing, systems administration, and creative production. Since around 2022 he has
+            focused on AI/ML workflows and agentic tooling. The coaching model is built from that trail: public code,
+            practical writing, hands-on projects, and a delivery rhythm that makes the offer concrete.
+          </p>
+          <div class="cta-row">
+            <a class="button button--primary" href="./signup.html" data-track-click="cta_apply">Sign up now</a>
+            <a class="button button--ghost" href="./services.html" data-track-click="cta_services">See the process</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel card">
+          <p class="eyebrow">Why trust this work</p>
+          <h2>Creative + technical, not just technical.</h2>
+          <p>
+            The NYU Tisch background matters because coaching is part engineering, part communication, and part
+            product judgment. I care about whether the tool helps you ship, not whether it sounds impressive.
+          </p>
+          <div class="chip-row">
+            <span class="chip">25+ years in tech</span>
+            <span class="chip">Consulting since 2016</span>
+            <span class="chip">Enterprise software</span>
+            <span class="chip">Creative production</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Resume snapshot</p>
+          <h2>The background behind the coaching.</h2>
+          <p class="muted">
+            These are the parts of the resume that matter most for mentorship: enterprise systems, client delivery,
+            public tools, and the ability to translate technical work into something practical for real builders.
+          </p>
+        </header>
+        <div id="resume-highlights" class="card-grid">
+          <article class="feature-card">
+            <p class="eyebrow">Background</p>
+            <h3>25+ years across software and IT</h3>
+            <p class="muted">
+              Kyle's career spans enterprise software, testing, systems administration, and consulting long enough to
+              know what actually holds up in production.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="eyebrow">Consulting</p>
+            <h3>myTech.Today since 2016</h3>
+            <p class="muted">
+              He has run myTech.Today as an MSP and consulting practice in Chicagoland, delivering AI apps,
+              automation, security, and custom development for real clients.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="eyebrow">Enterprise</p>
+            <h3>Enterprise systems background</h3>
+            <p class="muted">
+              Earlier work touched ERP, EDI, SQL Server, C#, Active Directory, backup and recovery, and acquisition
+              data migrations.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="eyebrow">Creative</p>
+            <h3>Creative production roots</h3>
+            <p class="muted">
+              Sony Computer Entertainment, Three Space Imagery, and game production work shaped the product judgment
+              and communication side of the coaching.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="eyebrow">Public trail</p>
+            <h3>LinkedIn, GitHub, and npm</h3>
+            <p class="muted">
+              The resume links point to a public footprint that includes senior IT history, open-source tools, and
+              reusable packages for AI workflows.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="eyebrow">AI focus</p>
+            <h3>AI-first work since around 2022</h3>
+            <p class="muted">
+              Recent work focuses on Claude, MCP servers, agentic frameworks, local workflows, and tooling that makes
+              AI useful instead of theatrical.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Credibility</p>
+          <h2>Why Kyle Rode.</h2>
+          <p class="muted">
+            The point is not to impress with jargon. It is to show the trail of work that makes the coaching useful in
+            the real world.
+          </p>
+        </header>
+        <div id="credibility-grid" class="card-grid"></div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Public trail</p>
+          <h2>Start with the public trail.</h2>
+        </header>
+        <div id="about-resources" class="resource-grid"></div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Tools and focus</p>
+          <h2>The stack I keep coming back to.</h2>
+        </header>
+        <div class="card">
+          <div class="chip-row">
+            <span class="chip">myTech.Today</span>
+            <span class="chip">GitHub: mytech-today-now</span>
+            <span class="chip">Practical AI coding guides</span>
+            <span class="chip">npm packages</span>
+            <span class="chip">Local setups</span>
+            <span class="chip">Cost reduction</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside id="sticky-links" class="sticky-links" aria-label="Project links"></aside>
+
+    <footer class="site-footer">
+      <div class="site-footer__grid">
+        <div class="site-footer__meta">
+          <p class="eyebrow">Kyle Rode</p>
+          <p>Helping builders become more effective with AI while staying firmly in control of their craft.</p>
+        </div>
+        <div class="footer-links">
+          <a class="button button--ghost" href="./pricing.html">Pricing</a>
+          <a class="button button--ghost" href="./contact.html">Contact</a>
+        </div>
+      </div>
+      <p>© <span id="footer-year">2026</span> Kyle Rode.</p>
+    </footer>
+
+    <dialog id="shortcuts-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Keyboard shortcuts</p>
+            <h2>Quick actions</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close shortcuts dialog">Close</button>
+        </header>
+        <div class="shortcut-grid">
+          <div><kbd>?</kbd><span>Open this help panel</span></div>
+          <div><kbd>1</kbd> to <kbd>6</kbd><span>Jump to the main pages</span></div>
+          <div><kbd>S</kbd><span>Open signup</span></div>
+          <div><kbd>T</kbd><span>Cycle themes</span></div>
+          <div><kbd>B</kbd><span>Toggle big text</span></div>
+          <div><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd><span>Open diagnostics</span></div>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="debug-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Diagnostics</p>
+            <h2>Debug mode</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close diagnostics">Close</button>
+        </header>
+        <div id="debug-content" class="debug-content"></div>
+      </form>
+    </dialog>
+
+    <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <template id="toast-template">
+      <article class="toast card">
+        <strong class="toast-title"></strong>
+        <p class="toast-body"></p>
+      </article>
+    </template>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

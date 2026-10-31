@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Kyle Rode AI Coding Coach preview">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#071118" />
+      <stop offset="50%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="48" fill="url(#bg)" />
+  <circle cx="1020" cy="120" r="170" fill="rgba(255,255,255,0.08)" />
+  <circle cx="1020" cy="120" r="108" fill="rgba(255,255,255,0.11)" />
+  <rect x="84" y="88" width="190" height="58" rx="29" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" />
+  <text x="179" y="126" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="22" letter-spacing="0.22em">AI COACH</text>
+  <text x="84" y="252" fill="#ffffff" font-family="Georgia, serif" font-size="78" font-weight="800">Kyle Rode</text>
+  <text x="84" y="332" fill="rgba(255,255,255,0.88)" font-family="Inter, system-ui, sans-serif" font-size="44" font-weight="600">AI Coding Coach / Programming Mentor</text>
+  <text x="84" y="404" fill="rgba(255,255,255,0.76)" font-family="Inter, system-ui, sans-serif" font-size="28">
+    Mentorship that teaches self-reliance with Cursor, Claude, Ollama, and practical goal gates.
+  </text>
+  <rect x="84" y="466" width="382" height="80" rx="24" fill="url(#accent)" />
+  <text x="275" y="516" text-anchor="middle" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700">
+    Monthly mentorship • $500-$1,000
+  </text>
+</svg>
+

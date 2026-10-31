@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f3ede4" />
+    <meta
+      name="description"
+      content="Contact Kyle Rode about AI coding mentorship, monthly coaching, and guided self-reliance."
+    />
+    <meta property="og:title" content="Contact | Kyle Rode" />
+    <meta
+      property="og:description"
+      content="Use the contact form to outline your stack, your goals, and the type of mentorship you want."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/og-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="ga4-measurement-id" content="" />
+    <meta name="apple-mobile-web-app-title" content="Kyle Rode" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon.svg" />
+    <title>Contact | Kyle Rode</title>
+    <script>
+      (() => {
+        const themeKey = 'ai-coach-v2.theme';
+        const bigTextKey = 'ai-coach-v2.bigText';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const preference = JSON.parse(localStorage.getItem(themeKey) || '"auto"');
+        const resolved =
+          preference === 'light' || preference === 'dark'
+            ? preference
+            : prefersDark
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = resolved;
+        if (JSON.parse(localStorage.getItem(bigTextKey) || 'false')) {
+          document.documentElement.classList.add('big-text');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles/site.css" />
+  </head>
+  <body class="site-shell" data-page="contact">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient-shell" aria-hidden="true">
+      <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+      <div class="ambient-fallback"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header__row">
+        <div class="brand-lockup">
+          <a class="brand-mark" href="./index.html" aria-label="Kyle Rode home">
+            <img src="./assets/icon.svg" alt="" />
+          </a>
+          <div class="brand-copy">
+            <strong>Kyle Rode</strong>
+            <p>AI Coding Coach / Programming Mentor</p>
+          </div>
+        </div>
+
+        <div class="site-actions">
+          <button id="install-button" class="button button--ghost icon-button" type="button" hidden>
+            Install app
+          </button>
+          <button id="shortcuts-button" class="button button--ghost icon-button" type="button" aria-haspopup="dialog">
+            Shortcuts
+          </button>
+          <button id="theme-toggle" class="button button--ghost theme-toggle" type="button">Theme</button>
+          <button id="text-toggle" class="button button--ghost text-toggle" type="button">Big Text</button>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a data-nav="home" href="./index.html">Home</a>
+        <a data-nav="services" href="./services.html">Services</a>
+        <a data-nav="about" href="./about.html">About Kyle</a>
+        <a data-nav="pricing" href="./pricing.html">Pricing</a>
+        <a data-nav="signup" href="./signup.html">Signup</a>
+        <a data-nav="contact" href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="page-hero" data-reveal>
+        <div class="hero-copy flow">
+          <p class="eyebrow">Contact</p>
+          <h1>Tell me what you are building and where the work is getting stuck.</h1>
+          <p class="lede">
+            The form below creates a local draft, gives you a clean email summary, and helps me see whether the fit is
+            for the lower-touch or flagship cadence.
+          </p>
+          <div class="cta-row">
+            <a class="button button--primary" href="./contact.html#contact-form" data-track-click="cta_form">Open the form</a>
+            <a class="button button--ghost" href="mailto:hello@mytech.today" data-track-click="cta_email">Email directly</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel card">
+          <p class="eyebrow">Quick prompts</p>
+          <h2>Useful starting points.</h2>
+          <p>Pick a prompt, fill in the form, and I will have enough context to suggest the next best step.</p>
+          <div id="contact-prompts" class="contact-prompts"></div>
+        </aside>
+      </section>
+
+      <section class="page-section contact-grid" data-reveal>
+        <form id="contact-form" class="card flow" novalidate>
+          <header class="page-section__head">
+            <p class="eyebrow">Application form</p>
+            <h2>What are you trying to build?</h2>
+            <p class="muted">
+              The more concrete you are, the easier it is to align on goals, success gates, and the right monthly
+              tier.
+            </p>
+          </header>
+
+          <div class="field-grid">
+            <label class="field">
+              <span class="field-label">Name</span>
+              <input name="name" autocomplete="name" required />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Timezone</span>
+              <input name="timezone" autocomplete="timezone" placeholder="America/Chicago" required />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Preferred tier</span>
+              <select name="tier" required>
+                <option value="">Choose a tier</option>
+                <option value="Momentum">$500 Momentum</option>
+                <option value="Deep Mentorship">$1,000 Deep Mentorship</option>
+              </select>
+            </label>
+
+            <label class="field field--full">
+              <span class="field-label">Current stack</span>
+              <input name="stack" placeholder="React, Node, PowerShell, etc." required />
+            </label>
+
+            <label class="field field--full">
+              <span class="field-label">AI tools you want to use</span>
+              <input name="tools" placeholder="Cursor, Claude, Ollama..." required />
+            </label>
+
+            <label class="field field--full">
+              <span class="field-label">What are you trying to achieve?</span>
+              <textarea
+                name="goal"
+                rows="5"
+                placeholder="Describe the project, the bottleneck, and the success gate."
+                required
+              ></textarea>
+            </label>
+
+            <label class="field field--full">
+              <span class="field-label">Budget / timing notes</span>
+              <textarea name="notes" rows="4" placeholder="Any timing constraints, launch goals, or context."></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit" data-track-click="form_submit">Save application draft</button>
+            <button id="copy-application-button" class="button button--ghost" type="button" data-track-click="copy_summary">
+              Copy summary
+            </button>
+            <a
+              id="email-application-button"
+              class="button button--ghost"
+              href="mailto:hello@mytech.today"
+              data-track-click="email_summary"
+            >
+              Open email draft
+            </a>
+          </div>
+          <p class="muted">
+            The draft is stored locally so you can come back later if you need to refine the details.
+          </p>
+        </form>
+
+        <aside class="contact-summary flow">
+          <section class="card">
+            <p class="eyebrow">Live summary</p>
+            <div id="contact-summary"></div>
+          </section>
+
+          <section class="card">
+            <p class="eyebrow">Next steps</p>
+            <ol class="note-list">
+              <li>Review the application and current goals.</li>
+              <li>Align on the right tier and support cadence.</li>
+              <li>Schedule the free setup session.</li>
+              <li>Start the monthly mentorship rhythm.</li>
+            </ol>
+          </section>
+
+          <section class="card">
+            <p class="eyebrow">Direct contact</p>
+            <a class="button button--ghost" href="mailto:hello@mytech.today">hello@mytech.today</a>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <aside id="sticky-links" class="sticky-links" aria-label="Project links"></aside>
+
+    <footer class="site-footer">
+      <div class="site-footer__grid">
+        <div class="site-footer__meta">
+          <p class="eyebrow">Kyle Rode</p>
+          <p>Use the form or the inbox. Either way, keep the message focused on the problem you want to solve.</p>
+        </div>
+        <div class="footer-links">
+          <a class="button button--ghost" href="./pricing.html">Pricing</a>
+          <a class="button button--ghost" href="./services.html">Services</a>
+        </div>
+      </div>
+      <p>© <span id="footer-year">2026</span> Kyle Rode.</p>
+    </footer>
+
+    <dialog id="shortcuts-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Keyboard shortcuts</p>
+            <h2>Quick actions</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close shortcuts dialog">Close</button>
+        </header>
+        <div class="shortcut-grid">
+          <div><kbd>?</kbd><span>Open this help panel</span></div>
+          <div><kbd>1</kbd> to <kbd>6</kbd><span>Jump to the main pages</span></div>
+          <div><kbd>S</kbd><span>Open signup</span></div>
+          <div><kbd>T</kbd><span>Cycle themes</span></div>
+          <div><kbd>B</kbd><span>Toggle big text</span></div>
+          <div><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd><span>Open diagnostics</span></div>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="debug-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Diagnostics</p>
+            <h2>Debug mode</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close diagnostics">Close</button>
+        </header>
+        <div id="debug-content" class="debug-content"></div>
+      </form>
+    </dialog>
+
+    <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <template id="toast-template">
+      <article class="toast card">
+        <strong class="toast-title"></strong>
+        <p class="toast-body"></p>
+      </article>
+    </template>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#eaf6ff" />
+    <meta
+      name="description"
+      content="Kyle Rode is an AI coding coach and programming mentor helping remote developers build self-reliance with Cursor, Claude, Ollama, and practical goal gates."
+    />
+    <meta property="og:title" content="Kyle Rode | AI Coding Coach" />
+    <meta
+      property="og:description"
+      content="High-conversion mentorship website and interactive media studio for AI-first developers."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/og-card.svg" />
+    <meta name="ga4-measurement-id" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-mobile-web-app-title" content="Kyle Rode" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Kyle Rode | AI Coding Coach</title>
+    <script>
+      (() => {
+        const themeKey = 'ai-coach.theme';
+        const bigTextKey = 'ai-coach.bigText';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const themePreference = JSON.parse(localStorage.getItem(themeKey) || '"auto"');
+        const resolvedTheme =
+          themePreference === 'light' || themePreference === 'dark'
+            ? themePreference
+            : prefersDark
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = resolvedTheme;
+        if (JSON.parse(localStorage.getItem(bigTextKey) || 'false')) {
+          document.documentElement.classList.add('big-text');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Kyle Rode",
+        "url": "https://mytech.today",
+        "description": "AI coding coach and programming mentor helping remote developers build self-reliance with AI tools.",
+        "areaServed": "Worldwide",
+        "priceRange": "$1,000/month",
+        "makesOffer": {
+          "@type": "Offer",
+          "price": "1000",
+          "priceCurrency": "USD",
+          "description": "Twice-monthly live sessions, unlimited async messaging, and a complimentary setup call."
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-deck">Skip to content</a>
+
+    <div class="shell-backdrop" aria-hidden="true">
+      <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+      <div class="ambient-fallback"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="brand-lockup">
+        <a class="brand-mark" href="#/home" aria-label="Kyle Rode home">
+          <svg viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="brand-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#22c55e" />
+                <stop offset="100%" stop-color="#0ea5e9" />
+              </linearGradient>
+            </defs>
+            <rect x="6" y="6" width="84" height="84" rx="24" fill="url(#brand-gradient)" />
+            <path
+              d="M34 28v40M34 48h11l17-20M45 48l21 20"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <div class="brand-copy">
+          <p class="eyebrow">AI Coding Coach / Programming Mentor</p>
+          <h1>Kyle Rode</h1>
+          <p class="tagline">Empowerment through guidance</p>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <button id="install-button" class="icon-button pill-button" type="button" hidden>
+          Install app
+        </button>
+        <button id="shortcuts-button" class="icon-button" type="button" aria-haspopup="dialog">
+          Shortcuts
+        </button>
+        <button id="theme-toggle" class="icon-button" type="button">Theme</button>
+        <button id="text-toggle" class="icon-button" type="button">Big Text</button>
+        <button id="menu-toggle" class="icon-button menu-button" type="button" aria-expanded="false" aria-controls="sidebar">
+          Menu
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside id="sidebar" class="sidebar" aria-label="Primary navigation">
+        <div class="sidebar-surface">
+          <nav class="sidebar-nav" aria-label="Primary">
+            <button type="button" data-route="home" role="tab">Home</button>
+            <button type="button" data-route="services" role="tab">Services</button>
+            <button type="button" data-route="studio" role="tab">Studio</button>
+            <button type="button" data-route="pricing" role="tab">Pricing</button>
+            <button type="button" data-route="apply" role="tab">Apply</button>
+          </nav>
+
+          <section class="sidebar-panel card">
+            <p class="eyebrow">Core offer</p>
+            <h2>$1,000 / month</h2>
+            <p>
+              Twice-monthly live screen-share sessions, unlimited async messaging, and a complimentary setup call.
+            </p>
+            <ul class="sidebar-checklist">
+              <li>24-hour async response target</li>
+              <li>AI-tool mastery over dependency</li>
+              <li>Actionable summaries after every call</li>
+            </ul>
+          </section>
+
+          <section class="sidebar-panel card">
+            <p class="eyebrow">Credibility</p>
+            <ul class="badge-list">
+              <li>myTech.Today</li>
+              <li>mytech-today-now</li>
+              <li>augment-extensions</li>
+              <li>PowerShell tools</li>
+              <li>NYU Tisch</li>
+            </ul>
+          </section>
+
+          <div class="sidebar-cta">
+            <a class="primary-button" href="#/apply">Apply now</a>
+            <a class="secondary-button" href="#/studio">Open studio</a>
+          </div>
+
+          <button class="sidebar-resizer" type="button" aria-label="Resize sidebar"></button>
+        </div>
+      </aside>
+
+      <main id="main-deck" class="deck" tabindex="-1">
+        <section id="home" class="page page--home" data-page="home" role="region" aria-labelledby="home-title">
+          <div class="page-inner">
+            <header class="page-hero hero">
+              <div class="hero-copy flow">
+                <p class="hero-kicker">Remote developers, indie hackers, and AI-curious professionals.</p>
+                <h2 id="home-title">Learn to move faster with AI while staying the engineer in charge.</h2>
+                <p class="hero-lead">
+                  Kyle Rode helps you build a repeatable AI workflow around goal gates, honest feedback, and the tools that
+                  actually make you more capable: Cursor, Claude, Ollama, PowerShell, and a little disciplined structure.
+                </p>
+                <div class="hero-actions cluster">
+                  <a class="primary-button" href="#/apply">Apply for mentorship</a>
+                  <a class="secondary-button" href="#/services">See the process</a>
+                  <a class="ghost-button" href="#/studio">Explore the studio</a>
+                </div>
+                <ul class="hero-bullets" id="hero-bullets">
+                  <li>Twice-monthly 1-hour live screen-share sessions</li>
+                  <li>Unlimited async messaging with a 24-hour turnaround</li>
+                  <li>Complimentary 30-minute setup session</li>
+                  <li>Empowerment-first coaching, not client ghostwriting</li>
+                </ul>
+              </div>
+
+              <aside class="hero-card card">
+                <p class="eyebrow">Core offer</p>
+                <h3>$1,000 / month</h3>
+                <dl class="stat-grid" aria-label="Offer summary">
+                  <div>
+                    <dt>Live sessions</dt>
+                    <dd>2 x 60 min</dd>
+                  </div>
+                  <div>
+                    <dt>Async response</dt>
+                    <dd>Within 24h</dd>
+                  </div>
+                  <div>
+                    <dt>Setup session</dt>
+                    <dd>30 min included</dd>
+                  </div>
+                  <div>
+                    <dt>Philosophy</dt>
+                    <dd>Self-reliance</dd>
+                  </div>
+                </dl>
+                <div class="proof-grid" id="proof-grid">
+                  <article class="proof-card">
+                    <p class="eyebrow">Owner</p>
+                    <strong>myTech.Today</strong>
+                  </article>
+                  <article class="proof-card">
+                    <p class="eyebrow">GitHub</p>
+                    <strong>mytech-today-now</strong>
+                  </article>
+                  <article class="proof-card">
+                    <p class="eyebrow">Blog</p>
+                    <strong>mytech.today</strong>
+                  </article>
+                  <article class="proof-card">
+                    <p class="eyebrow">Background</p>
+                    <strong>NYU Tisch</strong>
+                  </article>
+                </div>
+              </aside>
+            </header>
+
+            <section class="section">
+              <div class="section-heading">
+                <p class="eyebrow">Testimonials</p>
+                <h3>Outcomes that feel like momentum, not chaos.</h3>
+              </div>
+              <div class="carousel card" id="testimonial-carousel" aria-live="polite"></div>
+              <div class="carousel-controls cluster">
+                <button class="icon-button" type="button" data-carousel-prev>Prev</button>
+                <button class="icon-button" type="button" data-carousel-next>Next</button>
+                <div class="carousel-dots" id="carousel-dots" aria-label="Testimonial navigation"></div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <p class="eyebrow">Resources</p>
+                <h3>Start with the public trail.</h3>
+              </div>
+              <div class="resource-strip" id="home-resources"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="services" class="page page--services" data-page="services" role="region" aria-labelledby="services-title">
+          <div class="page-inner flow">
+            <header class="page-head">
+              <p class="eyebrow">Services</p>
+              <h2 id="services-title">How the mentorship works</h2>
+              <p>
+                We work from the outcome backward, keep the cadence predictable, and make sure each session ends with
+                a clear next step and a practical understanding of the tools involved.
+              </p>
+            </header>
+
+            <section class="section">
+              <div class="section-heading">
+                <p class="eyebrow">Process</p>
+                <h3>A four-step cadence that protects your time and attention.</h3>
+              </div>
+              <ol class="timeline" id="process-timeline"></ol>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <p class="eyebrow">Why Kyle</p>
+                <h3>Structured coaching, real-world tooling, and an empowerment-first mindset.</h3>
+              </div>
+              <div class="feature-grid" id="differentiator-grid"></div>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <p class="eyebrow">Differentiation</p>
+                <h3>How this compares to marketplace mentors.</h3>
+              </div>
+              <div class="table-wrap card">
+                <table class="comparison-table" id="comparison-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Topic</th>
+                      <th scope="col">Kyle Rode</th>
+                      <th scope="col">Codementor / marketplace</th>
+                      <th scope="col">MentorCruise style</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="studio" class="page page--studio" data-page="studio" role="region" aria-labelledby="studio-title">
+          <div class="page-inner flow" data-studio-root>
+            <header class="page-head">
+              <p class="eyebrow">Studio</p>
+              <h2 id="studio-title">Interactive media portfolio and demo workspace</h2>
+              <p>
+                This section shows the modernized media library, slideshow deck, playlists, import/export tools, and
+                dual-layer presentation engine that the app preserves and enhances.
+              </p>
+            </header>
+
+            <section class="studio-toolbar card">
+              <div class="toolbar-group toolbar-group--search">
+                <label class="field">
+                  <span class="field-label">Search library</span>
+                  <input
+                    id="studio-search"
+                    type="search"
+                    placeholder="Filter by title, tag, or note"
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                </label>
+              </div>
+
+              <div class="toolbar-group toolbar-group--actions cluster">
+                <button class="icon-button" type="button" id="import-files-button">Import files</button>
+                <button class="icon-button" type="button" id="import-snapshot-button">Import snapshot</button>
+                <button class="icon-button" type="button" id="export-snapshot-button">Export snapshot</button>
+                <button class="icon-button" type="button" id="seed-demo-button">Load demo set</button>
+                <button class="icon-button" type="button" id="clear-library-button">Clear library</button>
+              </div>
+
+              <div class="toolbar-group toolbar-group--controls">
+                <div class="segmented-control" id="playback-modes" role="tablist" aria-label="Playback modes"></div>
+                <label class="field">
+                  <span class="field-label">Blend mode</span>
+                  <select id="blend-select">
+                    <option value="normal">Normal</option>
+                    <option value="soft-light">Soft light</option>
+                    <option value="screen">Screen</option>
+                    <option value="multiply">Multiply</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span class="field-label">Crossfade</span>
+                  <input id="crossfade-range" type="range" min="250" max="2500" value="900" step="50" />
+                </label>
+              </div>
+            </section>
+
+            <div class="studio-grid">
+              <section class="studio-panel viewer-panel card">
+                <div class="viewer-stage" id="viewer-stage">
+                  <canvas id="viewer-canvas" class="viewer-canvas" aria-label="Slide preview canvas"></canvas>
+                  <video id="viewer-video" class="viewer-media" controls hidden playsinline></video>
+                  <audio id="viewer-audio" class="viewer-media" controls hidden></audio>
+                  <div class="viewer-overlay">
+                    <p class="eyebrow">Selected media</p>
+                    <h3 id="viewer-title">Select an item</h3>
+                    <p id="viewer-description">Choose a library item to preview it in the slideshow renderer.</p>
+                    <div class="chip-row" id="viewer-tags"></div>
+                  </div>
+                </div>
+
+                <div class="chapter-strip" id="chapter-strip" aria-label="Chapter markers"></div>
+
+                <div class="viewer-controls cluster">
+                  <button class="icon-button" type="button" id="viewer-prev">Prev</button>
+                  <button class="icon-button" type="button" id="viewer-play">Play</button>
+                  <button class="icon-button" type="button" id="viewer-next">Next</button>
+                  <button class="icon-button" type="button" id="viewer-add">Add to playlist</button>
+                  <output id="viewer-progress" class="viewer-progress" aria-live="polite">Idle</output>
+                </div>
+              </section>
+
+              <section class="studio-panel library-panel card">
+                <div class="library-header">
+                  <div>
+                    <p class="eyebrow">Media library</p>
+                    <h3>Virtualized for scale, still friendly on low-end devices.</h3>
+                  </div>
+                  <p id="library-stats" class="muted"></p>
+                </div>
+
+                <div class="dropzone" id="library-dropzone">
+                  <strong>Drop files here</strong>
+                  <span>Images, videos, audio, or a studio snapshot JSON</span>
+                </div>
+
+                <div
+                  id="library-viewport"
+                  class="library-viewport"
+                  tabindex="0"
+                  role="listbox"
+                  aria-label="Media library"
+                ></div>
+              </section>
+
+              <section class="studio-panel playlist-panel card">
+                <div class="playlist-header">
+                  <div>
+                    <p class="eyebrow">Playlist</p>
+                    <h3>Build a slide deck or queue.</h3>
+                  </div>
+                  <p id="playlist-stats" class="muted"></p>
+                </div>
+
+                <div id="playlist-list" class="playlist-list" aria-label="Current playlist"></div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="page page--pricing" data-page="pricing" role="region" aria-labelledby="pricing-title">
+          <div class="page-inner flow">
+            <header class="page-head">
+              <p class="eyebrow">Pricing</p>
+              <h2 id="pricing-title">One monthly offer, no confusion</h2>
+              <p>
+                The goal is to give you a stable rhythm, direct access, and clear expectations so the mentorship stays
+                focused on mastery rather than support-ticket churn.
+              </p>
+            </header>
+
+            <section class="pricing-slab">
+              <article class="pricing-card card">
+                <p class="eyebrow">Monthly mentorship</p>
+                <h3>$1,000 / month</h3>
+                <p class="pricing-copy">
+                  Built for developers who want a human guide for AI coding tools, without giving up ownership of their
+                  craft.
+                </p>
+                <ul class="pricing-features" id="pricing-features"></ul>
+                <div class="pricing-cta cluster">
+                  <a class="primary-button" href="#/apply">Apply for a slot</a>
+                  <button class="secondary-button" type="button" id="stripe-placeholder-button">
+                    Stripe checkout placeholder
+                  </button>
+                </div>
+                <p class="muted">
+                  Replace the placeholder with your live Stripe Checkout link before launch.
+                </p>
+              </article>
+
+              <article class="card pricing-note">
+                <p class="eyebrow">What you are buying</p>
+                <ul class="sidebar-checklist">
+                  <li>Guided progress on your real codebase</li>
+                  <li>Systematic AI tooling and workflow coaching</li>
+                  <li>Post-session summaries and success gates</li>
+                  <li>Support that helps you become more independent</li>
+                </ul>
+              </article>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <p class="eyebrow">FAQ</p>
+                <h3>Answers to the practical questions.</h3>
+              </div>
+              <div class="faq-accordion" id="faq-accordion"></div>
+            </section>
+          </div>
+        </section>
+
+        <section id="apply" class="page page--apply" data-page="apply" role="region" aria-labelledby="apply-title">
+          <div class="page-inner flow">
+            <header class="page-head">
+              <p class="eyebrow">Apply</p>
+              <h2 id="apply-title">Tell me what you are trying to build</h2>
+              <p>
+                Use the form to outline your current stack, your AI-tool goals, and the kind of mentorship outcome you
+                want. The app will keep a local draft and generate a clean summary for follow-up.
+              </p>
+            </header>
+
+            <div class="apply-grid">
+              <form class="application-form card" id="application-form">
+                <div class="field-grid">
+                  <label class="field">
+                    <span class="field-label">Name</span>
+                    <input name="name" autocomplete="name" required />
+                  </label>
+                  <label class="field">
+                    <span class="field-label">Email</span>
+                    <input name="email" type="email" autocomplete="email" required />
+                  </label>
+                  <label class="field">
+                    <span class="field-label">Timezone</span>
+                    <input name="timezone" autocomplete="timezone" placeholder="America/Chicago" required />
+                  </label>
+                  <label class="field">
+                    <span class="field-label">Current stack</span>
+                    <input name="stack" placeholder="React, Node, PowerShell, etc." required />
+                  </label>
+                  <label class="field field--full">
+                    <span class="field-label">What are you trying to achieve?</span>
+                    <textarea
+                      name="goal"
+                      rows="5"
+                      placeholder="Describe the project, the bottleneck, and the success gate."
+                      required
+                    ></textarea>
+                  </label>
+                  <label class="field field--full">
+                    <span class="field-label">AI tools you want to use</span>
+                    <input name="tools" placeholder="Cursor, Claude, Ollama..." required />
+                  </label>
+                  <label class="field field--full">
+                    <span class="field-label">Budget / timing notes</span>
+                    <textarea name="notes" rows="4" placeholder="Any timing constraints, launch goals, or context."></textarea>
+                  </label>
+                </div>
+                <div class="form-actions cluster">
+                  <button class="primary-button" type="submit">Save application draft</button>
+                  <button class="secondary-button" type="button" id="copy-application-button">Copy summary</button>
+                  <a class="ghost-button" id="email-application-button" href="#">Open email draft</a>
+                </div>
+                <p class="muted">
+                  The draft is stored locally in IndexedDB, and the app will generate a clean summary you can copy or email.
+                </p>
+              </form>
+
+              <aside class="apply-side flow">
+                <section class="card">
+                  <p class="eyebrow">What happens next</p>
+                  <ol class="sidebar-checklist">
+                    <li>Review the application and current goals</li>
+                    <li>Schedule the free setup session</li>
+                    <li>Align on success gates and tool choices</li>
+                    <li>Start the monthly mentorship cadence</li>
+                  </ol>
+                </section>
+
+                <section class="card">
+                  <div class="section-heading">
+                    <p class="eyebrow">Resources</p>
+                    <h3>Public work and supporting material.</h3>
+                  </div>
+                  <div class="resource-grid" id="resource-grid"></div>
+                </section>
+              </aside>
+            </div>
+
+            <section class="section card">
+              <div class="section-heading">
+                <p class="eyebrow">Direct contact</p>
+                <h3>Prefer email or a quick reality check?</h3>
+              </div>
+              <div class="contact-strip">
+                <a class="secondary-button" href="mailto:hello@mytech.today">hello@mytech.today</a>
+                <p class="muted">
+                  The site defaults to a placeholder inbox. Swap in the exact contact address you want to use before launch.
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottom-tabs" aria-label="Primary sections">
+      <button type="button" data-route="home" role="tab">Home</button>
+      <button type="button" data-route="services" role="tab">Services</button>
+      <button type="button" data-route="studio" role="tab">Studio</button>
+      <button type="button" data-route="pricing" role="tab">Pricing</button>
+      <button type="button" data-route="apply" role="tab">Apply</button>
+    </nav>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog id="shortcuts-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Keyboard shortcuts</p>
+            <h2>Quick actions</h2>
+          </div>
+          <button class="icon-button" value="close" aria-label="Close shortcuts dialog">Close</button>
+        </header>
+        <div class="shortcut-grid">
+          <div><kbd>?</kbd><span>Open this help panel</span></div>
+          <div><kbd>1</kbd> to <kbd>5</kbd><span>Jump to top-level sections</span></div>
+          <div><kbd>T</kbd><span>Cycle themes</span></div>
+          <div><kbd>B</kbd><span>Toggle big text</span></div>
+          <div><kbd>I</kbd><span>Import media in the studio</span></div>
+          <div><kbd>E</kbd><span>Export a snapshot</span></div>
+          <div><kbd>Space</kbd><span>Play or pause the studio deck</span></div>
+          <div><kbd>[</kbd> / <kbd>]</kbd><span>Previous or next page / slide</span></div>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="debug-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Diagnostics</p>
+            <h2>Debug mode</h2>
+          </div>
+          <button class="icon-button" value="close" aria-label="Close diagnostics">Close</button>
+        </header>
+        <div id="debug-content" class="debug-content"></div>
+      </form>
+    </dialog>
+
+    <template id="toast-template">
+      <article class="toast card">
+        <strong class="toast-title"></strong>
+        <p class="toast-body"></p>
+      </article>
+    </template>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f3ede4" />
+    <meta
+      name="description"
+      content="Kyle Rode is an AI coding coach and programming mentor helping remote developers build self-reliance with Cursor, Claude, Ollama, and structured mentorship."
+    />
+    <meta property="og:title" content="Kyle Rode | AI Coding Coach" />
+    <meta
+      property="og:description"
+      content="Premium AI coding mentorship for remote developers, indie hackers, and professionals who want to build faster without giving up engineering judgment."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/og-card.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="ga4-measurement-id" content="" />
+    <meta name="apple-mobile-web-app-title" content="Kyle Rode" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon.svg" />
+    <title>Kyle Rode | AI Coding Coach</title>
+    <script>
+      (() => {
+        const themeKey = 'ai-coach-v2.theme';
+        const bigTextKey = 'ai-coach-v2.bigText';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const preference = JSON.parse(localStorage.getItem(themeKey) || '"auto"');
+        const resolved =
+          preference === 'light' || preference === 'dark'
+            ? preference
+            : prefersDark
+              ? 'dark'
+              : 'light';
+        document.documentElement.dataset.theme = resolved;
+        if (JSON.parse(localStorage.getItem(bigTextKey) || 'false')) {
+          document.documentElement.classList.add('big-text');
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./styles/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Kyle Rode",
+        "url": "https://mytech.today",
+        "description": "AI coding coach and programming mentor helping remote developers build self-reliance with AI tools.",
+        "areaServed": "Worldwide",
+        "priceRange": "$500-$1,000/month",
+        "makesOffer": {
+          "@type": "Offer",
+          "price": "1000",
+          "priceCurrency": "USD",
+          "description": "Twice-monthly live sessions, unlimited async messaging, and a complimentary setup session."
+        }
+      }
+    </script>
+  </head>
+  <body class="site-shell" data-page="home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="ambient-shell" aria-hidden="true">
+      <canvas id="ambient-canvas" class="ambient-canvas"></canvas>
+      <div class="ambient-fallback"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header__row">
+        <div class="brand-lockup">
+          <a class="brand-mark" href="./index.html" aria-label="Kyle Rode home">
+            <img src="./assets/icon.svg" alt="" />
+          </a>
+          <div class="brand-copy">
+            <strong>Kyle Rode</strong>
+            <p>AI Coding Coach / Programming Mentor</p>
+          </div>
+        </div>
+
+        <div class="site-actions">
+          <button id="install-button" class="button button--ghost icon-button" type="button" hidden>
+            Install app
+          </button>
+          <button id="shortcuts-button" class="button button--ghost icon-button" type="button" aria-haspopup="dialog">
+            Shortcuts
+          </button>
+          <button id="theme-toggle" class="button button--ghost theme-toggle" type="button">Theme</button>
+          <button id="text-toggle" class="button button--ghost text-toggle" type="button">Big Text</button>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a data-nav="home" href="./index.html">Home</a>
+        <a data-nav="services" href="./services.html">Services</a>
+        <a data-nav="about" href="./about.html">About Kyle</a>
+        <a data-nav="pricing" href="./pricing.html">Pricing</a>
+        <a data-nav="signup" href="./signup.html">Signup</a>
+        <a data-nav="contact" href="./contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="page-hero" data-reveal>
+        <div class="hero-copy flow">
+          <p class="eyebrow">Remote developers, indie hackers, and AI-curious professionals</p>
+          <h1>Build faster with AI without handing over your engineering judgment.</h1>
+          <p class="lede">
+            Kyle Rode helps you turn Cursor, Claude, Ollama, and your own workflow into a repeatable system for
+            learning, debugging, and shipping. You get two live sessions each month, unlimited async support, a
+            setup call, and structured follow-through that keeps the work moving.
+          </p>
+          <div class="cta-row">
+            <a class="button button--primary" href="./signup.html" data-track-click="cta_apply">Sign up now</a>
+            <a class="button button--ghost" href="./pricing.html" data-track-click="cta_pricing">See pricing</a>
+            <a class="button button--ghost" href="./services.html" data-track-click="cta_services">See the process</a>
+          </div>
+          <div class="chip-row" aria-label="Core benefits">
+            <span class="chip">2 x 60-minute live screen-shares</span>
+            <span class="chip">24-hour async response target</span>
+            <span class="chip">30-minute setup and baseline session</span>
+            <span class="chip">Written recaps and next steps</span>
+          </div>
+        </div>
+
+        <aside class="hero-panel card">
+          <p class="eyebrow">Flagship offer</p>
+          <h2>$1,000 / month</h2>
+          <p>
+            Twice-monthly 1-hour live screen-share sessions, unlimited async messaging, a 30-minute setup session,
+            and structured summaries that keep your progress moving.
+          </p>
+          <div class="proof-grid" id="home-proof-points" aria-label="Proof points"></div>
+        </aside>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Why this works</p>
+          <h2>Mentorship that turns AI into a craft, not a shortcut.</h2>
+          <p class="muted">
+            Every session uses agreed goals, success gates, and a practical follow-up rhythm so progress is visible
+            and the lessons survive the call.
+          </p>
+        </header>
+        <div id="home-resources" class="resource-grid"></div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">What clients say</p>
+          <h2>Momentum that feels calm, focused, and repeatable.</h2>
+        </header>
+        <div id="testimonial-carousel" class="testimonial-card card" aria-live="polite"></div>
+        <div class="carousel-controls">
+          <button id="carousel-prev" class="button button--ghost" type="button">Prev</button>
+          <button id="carousel-next" class="button button--ghost" type="button">Next</button>
+          <div id="carousel-dots" class="chip-row" aria-label="Testimonial navigation"></div>
+        </div>
+      </section>
+
+      <section class="page-section" data-reveal>
+        <header class="page-section__head">
+          <p class="eyebrow">Session design</p>
+          <h2>What the monthly rhythm looks like.</h2>
+        </header>
+        <div id="home-highlights" class="card-grid"></div>
+      </section>
+    </main>
+
+    <aside id="sticky-links" class="sticky-links" aria-label="Project links"></aside>
+
+    <footer class="site-footer">
+      <div class="site-footer__grid">
+        <div class="site-footer__meta">
+          <p class="eyebrow">Kyle Rode</p>
+          <p>
+            AI coaching for builders who want better judgment, better tools, and a clear path to self-reliance.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a class="button button--ghost" href="mailto:hello@mytech.today">hello@mytech.today</a>
+          <a class="button button--ghost" href="./signup.html">Start signup</a>
+        </div>
+      </div>
+      <p>© <span id="footer-year">2026</span> Kyle Rode. Built for remote clients who want to master their own stack.</p>
+    </footer>
+
+    <dialog id="shortcuts-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Keyboard shortcuts</p>
+            <h2>Quick actions</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close shortcuts dialog">Close</button>
+        </header>
+        <div class="shortcut-grid">
+          <div><kbd>?</kbd><span>Open this help panel</span></div>
+          <div><kbd>1</kbd> to <kbd>6</kbd><span>Jump to the main pages</span></div>
+          <div><kbd>S</kbd><span>Open signup</span></div>
+          <div><kbd>T</kbd><span>Cycle themes</span></div>
+          <div><kbd>B</kbd><span>Toggle big text</span></div>
+          <div><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd><span>Open diagnostics</span></div>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="debug-dialog" class="dialog">
+      <form method="dialog" class="dialog-surface card">
+        <header class="dialog-header">
+          <div>
+            <p class="eyebrow">Diagnostics</p>
+            <h2>Debug mode</h2>
+          </div>
+          <button class="button button--ghost" value="close" aria-label="Close diagnostics">Close</button>
+        </header>
+        <div id="debug-content" class="debug-content"></div>
+      </form>
+    </dialog>
+
+    <div id="toast-stack" class="toast-stack" aria-live="polite" aria-atomic="true"></div>
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <template id="toast-template">
+      <article class="toast card">
+        <strong class="toast-title"></strong>
+        <p class="toast-body"></p>
+      </article>
+    </template>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>
